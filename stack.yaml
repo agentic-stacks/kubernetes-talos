@@ -1,0 +1,105 @@
+name: kubernetes-talos
+namespace: agentic-stacks
+version: 0.1.0
+description: >
+  Complete operational knowledge for deploying, managing, and operating
+  production Kubernetes clusters using Talos Linux. Covers bare metal,
+  virtualized, and cloud deployments with full platform stack guidance.
+
+repository: https://github.com/agentic-stacks/kubernetes-talos
+
+target:
+  software: talos-linux
+  versions:
+    - "1.9.x"
+    - "1.8.x"
+
+skills:
+  - name: concepts
+    entry: skills/foundation/concepts
+    description: Talos architecture, immutable OS model, API-driven operations
+  - name: machine-config
+    entry: skills/foundation/machine-config
+    description: Generating, patching, and managing Talos machine configurations
+  - name: infrastructure
+    entry: skills/foundation/infrastructure
+    description: Platform-specific provisioning (bare metal, VM, cloud)
+  - name: bootstrap
+    entry: skills/deploy/bootstrap
+    description: Initial cluster creation, talosctl bootstrap, kubeconfig
+  - name: networking
+    entry: skills/deploy/networking
+    description: CNI selection, comparison, installation, and configuration
+  - name: storage
+    entry: skills/deploy/storage
+    description: CSI selection, comparison, installation, and configuration
+  - name: gitops
+    entry: skills/platform/gitops
+    description: Flux and ArgoCD bootstrap, repo structure, workflow patterns
+  - name: ingress
+    entry: skills/platform/ingress
+    description: Ingress controllers, cert-manager, TLS automation
+  - name: observability
+    entry: skills/platform/observability
+    description: Monitoring, logging, tracing stack deployment
+  - name: security
+    entry: skills/platform/security
+    description: Policy engines, secrets management, RBAC, pod security
+  - name: service-mesh
+    entry: skills/platform/service-mesh
+    description: Service mesh options, installation, and configuration
+  - name: health-check
+    entry: skills/operations/health-check
+    description: Cluster and platform validation procedures
+  - name: scaling
+    entry: skills/operations/scaling
+    description: Adding/removing nodes, topology changes
+  - name: upgrades
+    entry: skills/operations/upgrades
+    description: Talos, Kubernetes, and component rolling upgrade procedures
+  - name: backup-restore
+    entry: skills/operations/backup-restore
+    description: etcd backup, Velero, disaster recovery procedures
+  - name: certificate-mgmt
+    entry: skills/operations/certificate-mgmt
+    description: Talos PKI, certificate rotation, expiry monitoring
+  - name: troubleshooting
+    entry: skills/diagnose/troubleshooting
+    description: Symptom-based diagnostic decision trees
+  - name: known-issues
+    entry: skills/reference/known-issues
+    description: Version-specific bugs, caveats, and workarounds
+  - name: compatibility
+    entry: skills/reference/compatibility
+    description: Component compatibility matrices (CNI, CSI, K8s versions)
+  - name: decision-guides
+    entry: skills/reference/decision-guides
+    description: Trade-off matrices for choosing components
+
+project:
+  structure:
+    - controlplane.yaml
+    - controlplane.yaml.orig
+    - worker.yaml
+    - worker.yaml.orig
+    - secrets.yaml
+    - patches/
+    - talosconfig
+    - kubeconfig
+    - manifests/
+    - scripts/
+
+requires:
+  tools:
+    - name: talosctl
+      description: Talos API client (version must match target Talos version)
+    - name: kubectl
+      description: Kubernetes CLI
+    - name: helm
+      description: Helm package manager
+    - name: flux
+      description: Flux CLI (optional, for GitOps with Flux)
+    - name: argocd
+      description: ArgoCD CLI (optional, for GitOps with ArgoCD)
+
+depends_on: []

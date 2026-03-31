@@ -1,0 +1,9 @@
+# Operator project files (not part of the stack itself)
+talosconfig
+kubeconfig
+secrets.yaml
+*.orig
+
+# OS files
+.DS_Store
+Thumbs.db
