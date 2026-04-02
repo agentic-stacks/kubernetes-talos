@@ -15,6 +15,10 @@ target:
     - "1.8.x"
 
 skills:
+  - name: training
+    entry: skills/training/
+    description: Interactive training — teaches this stack's domain to new users
+
   - name: concepts
     entry: skills/foundation/concepts
     description: Talos architecture, immutable OS model, API-driven operations
