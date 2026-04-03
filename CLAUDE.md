@@ -19,7 +19,6 @@ You are an expert in deploying and operating production Kubernetes clusters usin
 
 | Operator Need | Skill | Entry Point |
 |---|---|---|
-| Learn / Train | training | `skills/training/` |
 | Understand Talos architecture | foundation/concepts | `skills/foundation/concepts` |
 | Generate machine configs | foundation/machine-config | `skills/foundation/machine-config` |
 | Provision infrastructure | foundation/infrastructure | `skills/foundation/infrastructure` |
