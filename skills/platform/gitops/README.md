@@ -327,5 +327,7 @@ wc -l flux-install.yaml
 
 ## Next Steps
 
-- [Flux detailed guide](flux.md) — bootstrap, CRDs, multi-tenancy, monitoring
-- [ArgoCD detailed guide](argocd.md) — installation, Application patterns, RBAC, SSO, CLI usage
+- [Flux detailed guide](flux.md) — bootstrap, source CRDs, Kustomization, HelmRelease
+- [Flux operations](flux-operations.md) — multi-tenancy, SOPS, monitoring, Talos bootstrap, CLI, image automation
+- [ArgoCD detailed guide](argocd.md) — installation, Application CRD, App-of-Apps, ApplicationSet
+- [ArgoCD operations](argocd-operations.md) — RBAC, SSO, sync policies, notifications, CLI, Talos bootstrap, monitoring
