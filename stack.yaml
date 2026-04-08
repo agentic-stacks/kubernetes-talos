@@ -1,6 +1,5 @@
 name: kubernetes-talos
 namespace: agentic-stacks
-version: 0.1.0
 description: >
   Complete operational knowledge for deploying, managing, and operating
   production Kubernetes clusters using Talos Linux. Covers bare metal,
